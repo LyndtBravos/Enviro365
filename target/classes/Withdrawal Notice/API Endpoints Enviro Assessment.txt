@@ -1,0 +1,100 @@
+Enviro 365 Assessment
+API Endpoints & Arguments passed
+
+
+Address Endpoints
+
+1. http://localhost:8080/api/address/createAddress (POST)
+
+{
+    "street": "440 Louis Botha Avenue",
+    "city": "Johannesburg",
+    "province": "Gauteng",
+    "country": "South Africa",
+    "investorID": 1
+}
+
+{
+    "street": "11 Weaver Street",
+    "city": "Johannesburg",
+    "province": "Gauteng",
+    "country": "South Africa",
+    "investorID": 2
+}
+
+2. http://localhost:8080/api/address/getAllAddresses (GET)
+
+3. http://localhost:8080/api/address/getAddressByInvestorId/1 (GET)
+
+4. http://localhost:8080/api/address/deleteById/1 (DELETE)
+
+
+Contact Endpoints
+
+1. http://localhost:8080/api/contact/createContact (POST)
+
+{
+    "type": "Email Address",
+    "value": "lindtbravos@gmail.com",
+    "investorID": 1
+}
+
+2. http://localhost:8080/api/contact/getAllContacts (GET)
+
+3. http://localhost:8080/api/contact/getContactByInvestorId/1 (GET)
+
+4. http://localhost:8080/api/contact/deleteById/1 (DELETE)
+
+Product Endpoints
+
+1. http://localhost:8080/api/product/purchaseProduct (POST)
+
+{
+    "name": "Discovery Savings Fund",
+    "productType": "Savings",
+    "balance": 1500,
+    "investorID": 1
+}
+
+2. http://localhost:8080/api/product/getProductsByInvestorId/1 (GET)
+
+3. http://localhost:8080/api/product/getAllProducts (GET)
+
+4. http://localhost:8080/api/product/deleteProduct/1 (DELETE)
+
+
+Investor Endpoints
+
+1. http://localhost:8080/api/investor/getInvestors (GET)
+
+2. http://localhost:8080/api/investor/createInvestor (POST)
+
+{
+    "name": "Kayla Mthembu",
+    "age": 24,
+    "amount": 5000
+}
+
+3. http://localhost:8080/api/investor/getInvestorsByName/Brian Mthembu (GET)
+4. http://localhost:8080/api/investor/addMoney/Brian Mthembu/5000 (POST)
+5. http://localhost:8080/api/investor/withdrawMoney/Future X/9500 (POST)
+
+Notice Endpoints
+
+1. http://localhost:8080/api/notice/createNotice (POST)
+
+{
+    "name": "Brian Mthembu",
+    "productID": 1,
+    "withdrawalAmount": 1500.0,
+    "withdrawalDate": "2023-06-23",
+    "statementDate": "2023-06-23",
+    "investorID": 1
+}
+
+
+2. http://localhost:8080/api/notice/getNotice/1 (GET)
+3. http://localhost:8080/api/notice/getNotices (GET)
+4. http://localhost:8080/api/notice/writeNotices (POST)
+5. http://localhost:8080/api/notice/readNoticesFromFile (GET)
+6. http://localhost:8080/api/notice/deleteNotice/1 (DELETE)
